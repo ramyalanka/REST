@@ -1,0 +1,79 @@
+HTTP methods used in REST as conventions.
+
+1. get all messages
+GET Method is used to fetch all messages.
+http://www.messenger.com/v1/messages
+
+2. get message by msgId.
+GET Method is used to fetch selected message details by msgId.
+http://www.messenger.com/v1/messages/10
+
+3. create message.
+POST method is used in which message details are sent in body as JSON object or xml format.
+http://www.messenger.com/v1/messages
+{
+	'msgId': 12,
+	'content': 'Hello ji',
+	'author': 'Ramya'
+}
+
+
+4. update message.
+PUT method is used to update
+http://www.messenger.com/v1/messages/12
+{
+	'msgId': 12,
+	'content': 'Hi ji'
+}
+
+
+5. delete message.
+DELETE 	http://www.messenger.com/v1/messages/12
+
+
+
+COMMENTS-
+1. get all comments for message 21
+GET  	http://www.messenger.com/v1/messages/21/comments
+
+2. get specific comment by msgId.
+GET 	http://www.messenger.com/v1/messages/21/comments/4
+
+3. create comment.
+POST 	http://www.messenger.com/v1/messages/21/comments
+{
+	'msgId': 21,
+	'commentId': 5,
+	'commentContent': 'Hello ji',
+	'author': 'Ramya'
+}
+
+
+4. update comment.
+PUT		http://www.messenger.com/v1/messages/21/comments/5
+{
+	'msgId': 21,
+	'commentId': 5,
+	'commentContent': 'Hi ji',
+}
+
+
+5. delete message.
+DELETE 	http://www.messenger.com/v1/messages/21/comments/5
+
+Status Codes:
+
+2xx - Success
+This class of status code indicates that the client's request was successfully received, understood, and accepted.
+
+3xx - Redirect
+This class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request.
+
+4xx - Client error
+This class of status code is intended for cases in which the client seems to have erred. Except when responding to a HEAD request, the server SHOULD include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method.
+
+5xx - Server error
+indicate cases in which the server is aware that it has erred or is incapable of performing the request.
+
+
+
