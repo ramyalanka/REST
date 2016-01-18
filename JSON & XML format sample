@@ -1,0 +1,16 @@
+
+{
+    "id":1,
+    "message" : "Hi",
+    "created" : "2016-01-18T23:26:32.969+05:30",
+    "author" : "Ramya"
+}
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message>
+    <author>Lanka</author>
+    <created>2016-01-18T23:26:32.969+05:30</created>
+    <id>1</id>
+    <message>Hey</message>
+</message>
